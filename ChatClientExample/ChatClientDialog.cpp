@@ -19,7 +19,7 @@ BOOL ChatClientDialog::OnInitDialog() {
 	CDialog::OnInitDialog();
 
 	this->socket.Create();
-	if (this->socket.Connect(_T("127.0.0.1"), 21000) == FALSE)
+	if (this->socket.Connect(_T("192.168.0.12"), 63620) == FALSE)
 	{
 		AfxMessageBox(_T("ERROR: Failed to connect server"));
 		PostQuitMessage(0);
