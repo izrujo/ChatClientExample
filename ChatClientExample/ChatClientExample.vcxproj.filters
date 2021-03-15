@@ -18,13 +18,13 @@
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ChatClientDialog.h">
-      <Filter>Resource Files</Filter>
-    </ClInclude>
     <ClInclude Include="ConnectSocket.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="ChatClientApp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChatClientDialog.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
