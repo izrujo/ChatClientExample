@@ -18,8 +18,9 @@ void ChatClientDialog::DoDataExchange(CDataExchange* pDX) {
 BOOL ChatClientDialog::OnInitDialog() {
 	CDialog::OnInitDialog();
 
-	this->socket.Create();//
-	if (this->socket.Connect(_T("192.168.0.12"), 63620) == FALSE)
+	this->socket.Create();
+	//IP주소 : 서버 라우터의 공용 IP주소, 포트번호 : 포트포워딩 규칙 설정 시 설정한 서버의 외부 포트 번호
+	if (this->socket.Connect(_T("192.168.0.13"), 63379) == FALSE)
 	{
 		AfxMessageBox(_T("ERROR: Failed to connect server"));
 		PostQuitMessage(0);
@@ -34,7 +35,7 @@ void ChatClientDialog::OnSendButtonClicked()
 {
 	UpdateData(TRUE);
 	this->socket.Send((LPVOID)(LPCTSTR)this->message,
-		this->message.GetLength() * 2);
+		this->message.GetLength());
 
 	this->message = _T("");
 	UpdateData(FALSE);
